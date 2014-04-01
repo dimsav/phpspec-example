@@ -2,19 +2,15 @@
 
 namespace Example;
 
-class Calculator
+class ExpenseCalculator
 {
-    /**
-     * @var Expense[]
-     */
     private $expenses = array();
-
     public function add(Expense $expense)
     {
         $this->expenses[] = $expense;
     }
 
-    public function getSum()
+    public function sum()
     {
         $sum = 0;
         foreach ($this->expenses as $expense)

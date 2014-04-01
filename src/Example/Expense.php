@@ -10,7 +10,7 @@ class Expense
     {
         if ($amount <= 0)
         {
-            throw new \InvalidArgumentException("The amount $amount is not valid.");
+            throw new \InvalidArgumentException("The amount is not positive");
         }
         $this->amount = $amount;
     }
@@ -19,7 +19,4 @@ class Expense
     {
         return $this->amount;
     }
-
-
-
 }
